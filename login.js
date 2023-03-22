@@ -1,22 +1,18 @@
-function show() {
-    if (document.getElementById('inp1').type == "password") {
-        document.getElementById('inp1').type = "text";
-        document.getElementById('btn1').innerHTML = 'Hide';
+function random(params1, params2) {
+    if (document.getElementById(params1).type == "password") {
+        document.getElementById(params1).type = "text";
+        document.getElementById(params2).innerHTML = 'Hide';
     }
     else {
-        document.getElementById('inp1').type = "password";
-        document.getElementById('btn1').innerHTML = 'Show';
+        document.getElementById(params1).type = "password";
+        document.getElementById(params2).innerHTML = 'Show';
     }
 }
+function show() {
+    random('inp1', 'btn1');
+}
 function display() {
-    if (document.getElementById('inp2').type == "password") {
-        document.getElementById('inp2').type = "text";
-        document.getElementById('btn2').innerHTML = 'Hide';
-    }
-    else {
-        document.getElementById('inp2').type = "password";
-        document.getElementById('btn2').innerHTML = 'Show';
-    }
+    random('inp2', 'btn2');
 }
 
 
